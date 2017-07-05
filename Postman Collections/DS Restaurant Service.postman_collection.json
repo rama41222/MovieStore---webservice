@@ -1,0 +1,104 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DS Restaurant Service",
+		"_postman_id": "cb8bd4f1-4f94-f21d-e6a1-2aef6d00de39",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082",
+			"request": {
+				"url": "http://localhost:8082",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurants",
+			"request": {
+				"url": "http://localhost:8082/restaurants",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurants/r3",
+			"request": {
+				"url": "http://localhost:8082/restaurants/r3",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurants",
+			"request": {
+				"url": "http://localhost:8082/restaurants",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"r10\",\n  \"name\": \"x Rest\",\n  \"location\": \"Mathurata\",\n  \"suites\": [\n    {\n      \"type\": \"Sux Suite\",\n      \"accomodation\": 1,\n      \"price\": 500\n    }\n  ]\n}"
+				},
+				"description": "r10"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurants/r10",
+			"request": {
+				"url": "http://localhost:8082/restaurants/r10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"r10\",\n  \"name\": \"x Rest\",\n  \"location\": \"Mathurata my rata\",\n  \"suites\": [\n    {\n      \"type\": \"Sux Suite\",\n      \"accomodation\": 1,\n      \"price\": 500\n    }\n  ]\n}"
+				},
+				"description": "r10"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/restaurants/r10",
+			"request": {
+				"url": "http://localhost:8082/restaurants/r10",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"r10\",\n  \"name\": \"x Rest\",\n  \"location\": \"Mathurata my rata\",\n  \"suites\": [\n    {\n      \"type\": \"Sux Suite\",\n      \"accomodation\": 1,\n      \"price\": 500\n    }\n  ]\n}"
+				},
+				"description": "deleted"
+			},
+			"response": []
+		}
+	]
+}

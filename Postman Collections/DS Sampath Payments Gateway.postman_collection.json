@@ -1,0 +1,51 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DS Sampath Payments Gateway",
+		"_postman_id": "569c9e68-f07c-fab0-3072-af0b6f25f490",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/",
+			"request": {
+				"url": "http://localhost:3001/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ccno\":\"2323232323\",\n\t\"cvv\":\"232\",\n\t\"amt\" : 2000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/transaction/",
+			"request": {
+				"url": "http://localhost:3001/transaction/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ccno\":\"2323232323\",\n\t\"cvv\":\"232\",\n\t\"amt\" : 2000,\n\t\"email\": \"dinushankanrg@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

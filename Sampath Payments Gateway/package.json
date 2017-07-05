@@ -1,0 +1,23 @@
+{
+  "name": "sampathpaymentsgateway",
+  "version": "1.0.0",
+  "description": "sampath bank payments gateway emulator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "rest"
+  ],
+  "author": "rama41222",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.0",
+    "nodemailer": "^4.0.1"
+  }
+}

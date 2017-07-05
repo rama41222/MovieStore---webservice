@@ -1,0 +1,32 @@
+ <h1 class="text-muted">My Tickets</h1>
+<hr/>
+
+	<table class="table table-striped lead" style="font-size: 1.2em" >
+
+		<thead>
+			<tr>
+				<th >Ticket ID</th>
+				<th>Movie Name</th>
+				<th>Movie Time</th>
+				<th>Snacks</th>
+				<th>Restuarant</th>
+				<th>Suite</th>
+				<th>Total Charge</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="ticket in tickets">
+			{{ticket}}
+				<td>{{ticket._id}}</td>
+				<td>{{ticket.mname}}</td>
+				<td>{{ticket.mtime}}</td>
+				<td>{{ticket.sname}}</td>
+				<td>{{ticket.rname}}</td>
+				<td>{{ticket.rtype}}</td>
+				<td>RS {{ticket.grandtotal}} /=</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+

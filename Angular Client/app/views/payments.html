@@ -1,0 +1,56 @@
+<h1 class="text-muted">Checkout Here</h1>
+<hr/>
+
+<form ng-submit="pay()" name="register"  class="form" novalidate>
+	<label class="lead">Movie : {{formdata.movie.name}}</label>
+	<br/>
+	<label class="lead">Time : @ {{formdata.time}}</label>
+	<br/>
+	<label class="lead">Theatre : {{ formdata.location.name}} - {{formdata.location.location}}</label>
+	<br/>
+	<label class="lead">Grand Total : RS {{formdata.grandtotal}} /= </label>
+	<hr />
+
+	<label ng-show="formdata.restaurant.name" class="lead">Bookings : {{ formdata.restaurant.name}} - {{formdata.restaurant.location}}</label>
+	<label ng-show="formdata.suite.type" class="lead">Suite : {{ formdata.suite.type}} - Acco: {{formdata.suite.accomodation}}</label>
+
+	<label ng-show="formdata.snack.name" class="lead">Snacks : {{ formdata.snack.name}}</label>
+	<hr/>
+	<label class="lead">Select a Payments method : </label>
+	<select class="form-control" ng-model="formdata.paymentsmethod">
+		<option value="">Select a payments method</option>
+		<option ng-model="formdata.paymentsmethod">Sampath{{paymethod()}}</option>
+		<option ng-model="formdata.paymentsmethod">Dialog{{paymethod()}}</option>
+	</select>		
+	<br/>
+
+<!-- dialog -->
+<div ng-show="!formdata.sam" class="form-group">
+	<label class="lead">Mobile No : </label>
+	<input class="form-control" ng-model="formdata.mob" type="text">
+</div>
+
+<!-- sampath -->
+<div ng-show="formdata.sam" class="form-group">
+	<label class="lead">Creditcard No : </label>
+	<input class="form-control" ng-model="formdata.ccno" type="Number">
+</div>
+
+<div ng-show="formdata.sam" class="form-group">
+	<label class="lead">CVV : </label>
+	<input class="form-control" ng-model="formdata.cvv" type="Number">
+</div>
+
+<div ng-show="formdata.sam" class="form-group">
+	<label class="lead">Email : </label>
+	<input class="form-control" ng-model="formdata.email" type="email">
+</div>
+
+
+	<br/>
+	<button ng-disabled="!formdata.paymentsmethod" class="btn btn-lg btn-primary btn-block" type="submit">
+		Pay Now!
+	</button>
+	<hr/>
+	<a class="text-muted pull-right" ui-sref="movies">Cancel</a>
+</form>

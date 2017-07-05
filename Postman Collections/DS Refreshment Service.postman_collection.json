@@ -1,0 +1,104 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DS Refreshment Service",
+		"_postman_id": "83d28e88-5397-2b57-5334-44c874928973",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081",
+			"request": {
+				"url": "http://localhost:8081",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/snacks",
+			"request": {
+				"url": "http://localhost:8081/snacks",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/snacks/s2",
+			"request": {
+				"url": "http://localhost:8081/snacks/s2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/snacks",
+			"request": {
+				"url": "http://localhost:8081/snacks",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"s22\",\n  \"name\": \"French chicken pieces\",\n  \"price\": 1200\n}"
+				},
+				"description": "post"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/snacks/s22",
+			"request": {
+				"url": "http://localhost:8081/snacks/s22",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"s22\",\n  \"name\": \"Kentucky chicken pieces\",\n  \"price\": 1200\n}"
+				},
+				"description": "put"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/snacks/s22",
+			"request": {
+				"url": "http://localhost:8081/snacks/s22",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"s22\",\n  \"name\": \"Kentucky chicken pieces\",\n  \"price\": 1200\n}"
+				},
+				"description": "put"
+			},
+			"response": []
+		}
+	]
+}

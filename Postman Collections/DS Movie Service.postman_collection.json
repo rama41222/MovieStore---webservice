@@ -1,0 +1,128 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DS Movie Service",
+		"_postman_id": "dbfb50ec-aa17-3637-14ad-bfe5a16d368d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080",
+			"request": {
+				"url": "http://localhost:8080",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies",
+			"request": {
+				"url": "http://localhost:8080/movies",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/m1",
+			"request": {
+				"url": "http://localhost:8080/movies/m1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "application",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"m11\",\n  \"name\": \"John Wick2\",\n  \"price\": 690,\n  \"locations\": [\n    {\n      \"name\": \"Kanvoy 3D\",\n      \"location\": \"Malwatte\",\n      \"maxNoOfSeats\": 300\n    },\n    {\n      \"name\": \"Sigiri\",\n      \"location\": \"Katugastota\",\n      \"maxNoOfSeats\": 500\n    }\n  ],\n  \"showtimes\": [\n    \"9AM\",\n    \"1PM\",\n    \"6PM\"\n  ]\n  \n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/",
+			"request": {
+				"url": "http://localhost:8080/movies/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "application",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"m11\",\n  \"name\": \"John Wick2\",\n  \"price\": 690,\n  \"locations\": [\n    {\n      \"name\": \"Kanvoy 3D\",\n      \"location\": \"Malwatte\",\n      \"maxNoOfSeats\": 300\n    },\n    {\n      \"name\": \"Sigiri\",\n      \"location\": \"Katugastota\",\n      \"maxNoOfSeats\": 500\n    }\n  ],\n  \"showtimes\": [\n    \"9AM\",\n    \"1PM\",\n    \"6PM\"\n  ]\n  \n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/m11",
+			"request": {
+				"url": "http://localhost:8080/movies/m11",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "application",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"m11\",\n  \"name\": \"John Wick222222222\",\n  \"price\": 690,\n  \"locations\": [\n    {\n      \"name\": \"Kanvoy 3D\",\n      \"location\": \"Malwatte\",\n      \"maxNoOfSeats\": 300\n    },\n    {\n      \"name\": \"Sigiri\",\n      \"location\": \"Katugastota\",\n      \"maxNoOfSeats\": 500\n    }\n  ],\n  \"showtimes\": [\n    \"9AM\",\n    \"1PM\",\n    \"6PM\"\n  ]\n  \n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/m11",
+			"request": {
+				"url": "http://localhost:8080/movies/m11",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "application",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"m11\",\n  \"name\": \"John Wick222222222\",\n  \"price\": 690,\n  \"locations\": [\n    {\n      \"name\": \"Kanvoy 3D\",\n      \"location\": \"Malwatte\",\n      \"maxNoOfSeats\": 300\n    },\n    {\n      \"name\": \"Sigiri\",\n      \"location\": \"Katugastota\",\n      \"maxNoOfSeats\": 500\n    }\n  ],\n  \"showtimes\": [\n    \"9AM\",\n    \"1PM\",\n    \"6PM\"\n  ]\n  \n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

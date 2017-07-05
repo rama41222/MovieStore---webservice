@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DS Dialog Payments Gateway",
+		"_postman_id": "f3bb640f-179d-8dc3-6d4b-07dc33c2d8ff",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3002/",
+			"request": {
+				"url": "http://localhost:3002/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/transaction",
+			"request": {
+				"url": "http://localhost:3002/transaction",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"mob\":\"+94711570067\",\n\t\"amt\": 4000\n}"
+				},
+				"description": "post"
+			},
+			"response": []
+		}
+	]
+}

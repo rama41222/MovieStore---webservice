@@ -1,0 +1,25 @@
+<h1 class="text-muted">Movies</h1>
+<div class="row">
+	<div><h1 class="head">{{title}}</h1></div>
+	<div  class="container col-md-12" align="center" class="col-md-12">
+		 <input type="text" size="30" style="height: 40px;font-size: 25px;color:#3F729B;border-radius: 7px; border-width: 1px;padding:20px;border-style: solid; border-color:#ECF0F1" placeholder="Search a movie" ng-model="searchText"/>
+		<br/>
+	</div>
+</div>
+<br>
+
+<div align="center" class="container">
+
+<a  href="/#!/movie/{{movie.id}}" class="no-styles" ng-repeat="movie in movies |filter:searchText " ><div align="center" class="box-wrapper">
+ 	
+ 	<h4 class="lead">{{movie.name}}</h4>
+ 	<span ng-repeat="time in movie.showtimes"><code> {{time}} </code></span>
+	<br/>
+	<hr/>
+	<p>RS {{movie.price}} /=</p>
+	<p><span ng-repeat="location in movie.locations"> [ {{location.name}} - {{location.location}} ] </span></p>
+	<br/>
+
+</div>
+</a>
+</div>

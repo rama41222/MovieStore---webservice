@@ -1,0 +1,100 @@
+<h1 class="text-muted">{{formdata.movie.name}}</h1>
+<hr/>
+
+<form ng-submit="submit()" name="checkoutmovie" class="form" novalidate>
+
+<div class="form-group">
+	<label ng-model="formdata.id" class="lead">Movie ID : {{formdata.movie.id}}</label>
+</div>
+
+<div class="form-group">
+	<label class="lead">Theaters : </label>
+	  <select class="form-control" ng-selected="true" 
+      ng-options="location.name for location in formdata.movie.locations"
+      ng-model="formdata.location">
+      </select>
+      <br>
+	<p ng-show="location">Location: {{location.location}}</p>
+	<p ng-show="location">Capasity :  {{location.maxNoOfSeats}}</p>
+
+</div>
+
+<div ng-show="formdata.location" class="form-group">
+	<label class="lead">Show Times : </label>
+	<select class="form-control" ng-model="formdata.time">
+		<option ng-repeat="time in formdata.movie.showtimes">{{time}}</option>
+	</select>
+</div>
+
+<div ng-show="formdata.time" class="form-group">
+	<p class="lead">Number of Tickets : </p>
+	<input class="form-control" ng-model="formdata.qty" type="Number" max="formdata.location.maxNoOfSeats">
+	<p ng-show="formdata.qty" >Total ticket price: {{formdata.qty*formdata.movie.price}} /= </p>
+	<p style="display:none" ng-model="formdata.ticketCost">{{formdata.qty*formdata.movie.price}}</p>
+
+</div>
+
+<div  class="form-group">
+	<label class="lead" ng-model="formdata.price">Movie Price : RS {{formdata.movie.price}} /=</label>
+</div>
+<hr/>
+
+<div ng-show="formdata.qty" class="form-group">
+	<label class="lead">Snacks : </label>
+	
+	  <select class="form-control"
+      ng-options="snack.name for snack in snacks "
+      ng-model="formdata.snack">
+      </select>
+        <br>
+	<p ng-show="formdata.snack">Unit Price: {{formdata.snack.price}}</p>
+
+</div>
+
+<div ng-show="formdata.qty" class="form-group">
+	<label class="lead">Snacks Qty : </label>
+	<input class="form-control" ng-model="formdata.sqty" type="Number">
+</div>
+<p ng-show="formdata.sqty">Price : RS {{formdata.snack.price*formdata.sqty}} /=</p>
+
+<hr/>
+
+<div ng-show="formdata.qty" class="form-group">
+	<label class="lead">Restaurant Bookings : </label>
+	
+	  <select class="form-control"
+      ng-options="restaurant.name for restaurant in restaurants | filter:formdata.location.location"
+      ng-model="formdata.restaurant">
+      </select>
+        <br>
+	<p ng-show="formdata.restaurant">Location: {{formdata.restaurant.location}}</p>
+
+</div>
+
+
+<div  ng-show="formdata.restaurant" class="form-group">
+	<label class="lead">Available Suites : </label>
+	
+	  <select class="form-control"
+      ng-options="suite.type for suite in formdata.restaurant.suites"
+      ng-model="formdata.suite">
+      </select>
+        <br>
+	<p ng-show="formdata.suite"> Price : RS {{formdata.suite.price}} /=</p>
+	<p ng-show="formdata.suite">Accomodation : {{formdata.suite.accomodation}} people</p>
+</div>
+
+<hr/>
+
+<div class="form-group">
+	<label for="gx" class="lead">Grand Total : &nbsp </label>
+	<span id="gx" ng-bind="gt()" class="lead"></span>
+</div>
+
+<br>
+
+	<button ng-disabled="!formdata.qty" class="btn btn-lg btn-primary btn-block" type="submit">
+			Checkout!
+	</button>
+	<hr/>
+</form>

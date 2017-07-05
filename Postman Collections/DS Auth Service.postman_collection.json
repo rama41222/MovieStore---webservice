@@ -1,0 +1,99 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DS Auth Service",
+		"_postman_id": "dc11255e-508d-3966-f5a7-60e3b7f41205",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/",
+			"request": {
+				"url": "http://localhost:3000/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/",
+			"request": {
+				"url": "http://localhost:3000/users/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test@test.com\",\n\t\"password\":\"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/authenticate",
+			"request": {
+				"url": "http://localhost:3000/users/authenticate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test@test.com\",\n\t\"password\":\"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/",
+			"request": {
+				"url": "http://localhost:3000/users/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsicGFzc3dvcmQiOiJpbml0IiwiZW1haWwiOiJpbml0IiwidGlja2V0cyI6ImluaXQiLCJzbmFja3MiOiJpbml0IiwicmVzZXJ2YXRpb25zIjoiaW5pdCIsIl9fdiI6ImluaXQiLCJfaWQiOiJpbml0In0sInN0YXRlcyI6eyJpZ25vcmUiOnt9LCJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfX3YiOnRydWUsInRpY2tldHMiOnRydWUsInNuYWNrcyI6dHJ1ZSwicmVzZXJ2YXRpb25zIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZW1haWwiOnRydWUsIl9pZCI6dHJ1ZX0sIm1vZGlmeSI6e30sInJlcXVpcmUiOnt9fSwic3RhdGVOYW1lcyI6WyJyZXF1aXJlIiwibW9kaWZ5IiwiaW5pdCIsImRlZmF1bHQiLCJpZ25vcmUiXX0sImVtaXR0ZXIiOnsiZG9tYWluIjpudWxsLCJfZXZlbnRzIjp7InNhdmUiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sImlzTmV3IjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGxdfSwiX2V2ZW50c0NvdW50IjoyLCJfbWF4TGlzdGVuZXJzIjowfX0sImlzTmV3IjpmYWxzZSwiX2RvYyI6eyJ0aWNrZXRzIjpbXSwic25hY2tzIjpbXSwicmVzZXJ2YXRpb25zIjpbXSwiX192IjowLCJwYXNzd29yZCI6IiQyYSQwNCRCcFVCUldUcWdHR3JvNHlEMlkyZWV1cXowTnU0R0tQQ0ZvTGV4TWRZTVpXNlI5ak92QVpCeSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsIl9pZCI6IjU5Mzg3ZDZiNzlmYWVkMjRmNzUzYmI4NiJ9LCIkaW5pdCI6dHJ1ZSwiaWF0IjoxNDk2ODc3MDUwLCJleHAiOjE0OTc0ODA0NTB9.nc7__TDRrzRWHsMLefgozXG7F_v9WTzkKq-WSrVplqY",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test@test.com\",\n\t\"password\":\"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
